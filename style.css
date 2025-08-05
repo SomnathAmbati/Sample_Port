@@ -520,6 +520,23 @@ p {
   font-size: 4rem;
   font-weight: 500;
 }
+.project-info .project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-info .project-title h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.project-info .project-title a {
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 2.5rem;
+}
+
 
 #projects .project-info h2 {
   font-size: 1.8rem;
@@ -908,13 +925,119 @@ p {
 
 
 
+/* Container setup */
+#achi .achi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+}
+
+/* Items wrapper */
+#achi .achi-items {
+  margin-top: 5rem;
+}
+
+/* Item layout */
+#achi .achi-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Image section (left) */
+#achi .achi-img {
+  flex-basis: 50%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#achi .achi-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#achi .achi-item:hover .achi-img img {
+  transform: scale(1.05);
+}
+
+/* Info section (right) */
+#achi .achi-info {
+  flex-basis: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Text styling */
+#achi .achi-info h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+#achi .achi-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#achi .achi-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  #achi .achi-item {
+    flex-direction: column;
+  }
+
+  #achi .achi-img,
+  #achi .achi-info {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  #achi .achi-img {
+    height: 200px;
+  }
+}
 
 
+.highlight-text {
+  background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: inline-block; /* makes the background hug content */
+}
 
+/* CSS */
+.gradient-border-img {
+  display: inline-block;
+  padding: 4px; /* Thickness of the gradient border */
+  border-radius: 10px; /* Optional rounded corners */
+  background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
 
-
-
-
-
-
-
+.img-inside {
+  display: block;
+  border-radius: 8px; /* Slightly smaller than outer radius */
+  width: 100%;
+  height: auto;
+}
